@@ -20,7 +20,7 @@ pub unsafe extern fn main() {
         alive();
 
         // If the serial write fails, we will halt (no more alive blinks)
-        hello(&ser).unwrap();
+        //hello(&ser).unwrap();
 
         // Don't spam the console
         bindings::delay(1000);

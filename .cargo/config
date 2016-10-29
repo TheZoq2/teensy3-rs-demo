@@ -5,7 +5,7 @@ target = "thumbv7em-none-eabi"
 rustflags = [
     "-C", "link-arg=-mcpu=cortex-m4",
     "-C", "link-arg=-mthumb",
-    "-C", "link-arg=-Tmk20dx256.ld",
+    "-C", "link-arg=-Tmk66fx1m0.ld",
     "-C", "link-arg=-Os",
     "-C", "link-arg=-Wl,--gc-sections,--defsym=__rtc_localtime=0",
     "-C", "link-arg=--specs=nano.specs",
