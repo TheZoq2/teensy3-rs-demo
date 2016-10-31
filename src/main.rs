@@ -7,6 +7,7 @@ extern crate teensy3;
 use teensy3::bindings;
 use teensy3::serial::Serial;
 
+
 #[no_mangle]
 pub unsafe extern fn main() {
     // Blink Loop
@@ -21,6 +22,7 @@ pub unsafe extern fn main() {
 
         // If the serial write fails, we will halt (no more alive blinks)
         //hello(&ser).unwrap();
+        //do_some_float_stuff();
 
         // Don't spam the console
         bindings::delay(1000);
@@ -44,3 +46,4 @@ pub fn hello(ser: &Serial) -> Result<(),()> {
     let msg = "Hello Teensy Rusty World!\n\r";
     ser.write_bytes(msg.as_bytes())
 }
+
