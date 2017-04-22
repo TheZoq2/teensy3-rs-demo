@@ -25,6 +25,14 @@ pub fn digital_read(pin: u8) -> bool {
     }
 }
 
+/// Read an analog value between 0 and 1024 from `pin`
+pub fn analog_read(pin: u8) -> u16
+{
+    unsafe{
+        bindings::analogRead(pin) as u16
+    }
+}
+
 #[derive(Debug)]
 pub enum PinMode {
     Input,
